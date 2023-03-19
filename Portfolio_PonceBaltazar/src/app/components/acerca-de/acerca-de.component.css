@@ -1,0 +1,42 @@
+/* Requiere ajustes cuando se esté mas avanzado el proyecto */
+
+.row{
+    padding: 15px;
+
+}
+div{
+    background-color: rgb(196, 200, 248);
+    text-align: center;
+}
+
+/* foto de perfil */
+@media (max-width: 575px){
+#FotoDePerfil{
+    position: absolute;
+    width: auto;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 35.5%;
+    top: 635px;
+    }
+}
+
+@media (min-width: 576px){
+    #FotoDePerfil{
+        position: absolute;
+        width: 300px;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 41%;
+        top: 680px;
+        }
+    }
+    
+
+/* nombre */
+
+#nombre{
+    font-weight: bold;
+    margin-top: 15%;
+    margin-left: 10px;
+}
