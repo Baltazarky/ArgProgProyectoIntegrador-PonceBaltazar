@@ -2,6 +2,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
-    "jquery": "^3.6.4"
+    "jquery": "^3.6.4",
+    "ng-circle-progress": "^1.7.1"
   }
 }
