@@ -23,6 +23,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
 
 @Configuration
 @EnableWebSecurity
@@ -59,7 +60,10 @@ public class MainSecurity {
                 .authorizeHttpRequests((requests) -> requests
                 .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
                 .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
-                .anyRequest().authenticated());
+                .anyRequest().authenticated())
+                 .cors()
+                .configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
+            .and();
 
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 

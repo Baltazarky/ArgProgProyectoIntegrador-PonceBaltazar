@@ -2,5 +2,6 @@
     <a href=""><img src="../../../assets/github.png" id="github"></a>
     <a href=""><img src="../../../assets/gmail.png" id="gmail"></a>
     <a href=""><img src="../../../assets/linkedin.png" id="linkedin"></a>
-    <button type="button" class="btn btn-outline-light" (click)="login()">INGRESO</button>
+    <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+    <button type="button" class="btn btn-outline-light" (click)="onLogout()" *ngIf="isLogged">CERRAR SESIÓN</button>
 </div>

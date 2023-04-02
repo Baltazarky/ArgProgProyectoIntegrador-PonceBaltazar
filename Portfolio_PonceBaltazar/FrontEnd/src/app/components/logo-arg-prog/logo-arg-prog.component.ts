@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./logo-arg-prog.component.css']
 })
 export class LogoArgProgComponent {
-
+  
 }
