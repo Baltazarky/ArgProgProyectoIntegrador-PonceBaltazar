@@ -3,6 +3,7 @@ package com.ArgProyecto.Baltazar_Ponce.Security;
 import com.ArgProyecto.Baltazar_Ponce.Security.Service.UserDetailsImpl;
 import com.ArgProyecto.Baltazar_Ponce.Security.jwt.JwtEntryPoint;
 import com.ArgProyecto.Baltazar_Ponce.Security.jwt.JwtTokenFilter;
+import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -54,19 +55,25 @@ public class MainSecurity {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable()
-                .exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeHttpRequests((requests) -> requests
-                .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
-                .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
-                .anyRequest().authenticated())
-                 .cors()
-                .configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues())
-            .and();
+    http.cors().and().csrf().disable()
+            .exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+            .authorizeHttpRequests((requests) -> requests
+            .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
+            .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
+            .anyRequest().authenticated())
+             .cors()
+            .configurationSource(request -> {
+                CorsConfiguration config = new CorsConfiguration();
+                config.setAllowedOrigins(Arrays.asList("http://localhost:8081", "http://localhost:4200/"));
+                config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+                config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
+                return config;
+            })
+        .and();
 
-        http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+    http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
-        return http.build();
+    return http.build();
     }
 }
