@@ -1,63 +1,34 @@
 <div class="row">
     <h1>Hard and Soft skills.</h1>
-    <div class="col-sm-4 col-md-4 col-lg-4"> 
-        <circle-progress
-        [percent]="85"
-        [radius]="45"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-      ></circle-progress>
+
+    <div class="col-lg-2">
+      <button type="button" routerLink="/newskill" class="btn btn-primary" *ngIf="isLogged">Nueva habilidad</button>
     </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
+
+    <div class="col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill"> 
         <circle-progress
-        [percent]="85"
+        [percent]="(skill.porcentaje)"
         [radius]="45"
+        [title]="(skill.nombre)"
+        [titleColor]="'#432F4C'"
+        [showTitle]="true"
+        [showImage]="false"
+        [imageHeight]="70"
+        [imageWidth]="70"
+        [showUnits]="false"
+        [showSubtitle]="false"
         [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
+        [innerStrokeWidth]="2"
         [outerStrokeColor]="'#78C000'"
         [innerStrokeColor]="'#C7E596'"
         [animation]="true"
         [animationDuration]="300"
       ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="45"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-      ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="45"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-      ></circle-progress>
-    </div>
-    <div class="col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="45"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
-        [animation]="true"
-        [animationDuration]="300"
-      ></circle-progress>
+
+      <div>
+        <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square"></i>EDITAR</button></td>
+      <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(skill.id)"><i class="bi bi-trash"></i>BORRAR</button></td>
+      </div>
+      
     </div>
 </div>

@@ -6,3 +6,9 @@
 div{
     background-color: rgb(196, 200, 248);
 }
+
+.circulo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

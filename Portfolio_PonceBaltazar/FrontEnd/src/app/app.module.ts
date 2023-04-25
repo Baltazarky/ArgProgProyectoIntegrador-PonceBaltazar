@@ -23,6 +23,8 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
 import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { EditSkillComponent } from './components/hys/edit-skill.component';
+import { NewSkillComponent } from './components/hys/new-skill.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
-    EditeducacionComponent
+    EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent
   ],
   imports: [
     BrowserModule,
@@ -52,22 +56,7 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
     AppRoutingModule,
     HttpClientModule,
     NgCircleProgressModule.forRoot({
-      "radius": 60,
-      "space": -10,
-      "outerStrokeGradient": true,
-      "outerStrokeWidth": 10,
-      "outerStrokeColor": "#4882c2",
-      "outerStrokeGradientStopColor": "#53a9ff",
-      "innerStrokeColor": "#e7e8ea",
-      "innerStrokeWidth": 10,
-      "title": "UI",
-      "animateTitle": false,
-      "animationDuration": 1000,
-      "showUnits": false,
-      "showBackground": false,
-      "clockwise": false,
-      "startFromZero": false,
-      "lazy": true
+      
     })
   ],
   providers: [
