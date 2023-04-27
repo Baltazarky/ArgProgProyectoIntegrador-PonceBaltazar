@@ -20,7 +20,7 @@ public class BaltazarPonceApplication {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("https://balponargprog.web.app/", "https://backend-mgub.onrender.com")
-                        .allowedMethods("*");
+                        .allowedMethods("*").allowedHeaders("*");
             }
         };
     }
