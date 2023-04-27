@@ -1,0 +1,21 @@
+ #render.yaml
+
+# Servicios de la aplicación
+services:
+  # Servicio web
+  - name: web
+    # Comando de construcción
+    buildCommand: npm install && npm run build
+    # Comando de inicio
+    startCommand: npm start
+    # Configuración de CORS
+    cors: cors.json
+
+# Archivo de configuración CORS
+files:
+  - path: cors.json
+    # Contenido del archivo
+    content: |
+      {
+        "allow_origins": ["https://balponargprog.web.app"]
+      }
