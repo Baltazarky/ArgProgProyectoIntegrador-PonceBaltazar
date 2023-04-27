@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://argbackendbalpon.onrender.com/auth/'
+  authURL = 'https://backend-mgub.onrender.com/auth/'
 
   constructor(private httpClient: HttpClient) { }
 

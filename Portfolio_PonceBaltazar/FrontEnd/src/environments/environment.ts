@@ -11,5 +11,5 @@ export const environment = {
   },
 
     production: false,
-    URL: 'https://argbackendbalpon.onrender.com'
+    URL: 'https://backend-mgub.onrender.com'
 };
