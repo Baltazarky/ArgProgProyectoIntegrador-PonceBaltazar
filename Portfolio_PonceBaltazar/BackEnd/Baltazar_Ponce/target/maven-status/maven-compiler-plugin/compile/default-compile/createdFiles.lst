@@ -17,6 +17,7 @@ com\ArgProyecto\Baltazar_Ponce\Security\Repository\iRolRepository.class
 com\ArgProyecto\Baltazar_Ponce\Security\Service\RolService.class
 com\ArgProyecto\Baltazar_Ponce\Entity\Persona.class
 com\ArgProyecto\Baltazar_Ponce\Security\jwt\JwtProvider.class
+com\ArgProyecto\Baltazar_Ponce\BaltazarPonceApplication$1.class
 com\ArgProyecto\Baltazar_Ponce\Service\SHyS.class
 com\ArgProyecto\Baltazar_Ponce\Entity\Educacion.class
 com\ArgProyecto\Baltazar_Ponce\Controller\PersonaController.class
