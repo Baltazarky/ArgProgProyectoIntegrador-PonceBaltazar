@@ -80,7 +80,7 @@ public class CExperiencia {
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200/", methods = {RequestMethod.DELETE})
+    @CrossOrigin(origins = "https://balponargprog.web.app", methods = {RequestMethod.DELETE})
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
          if(!sExperiencia.existsById(id))

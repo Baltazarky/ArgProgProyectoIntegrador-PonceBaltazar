@@ -10,6 +10,6 @@ export const environment = {
     measurementId: 'G-ZJ0VYM0SHF',
   },
 
-    production: false,
+    production: true,
     URL: 'https://backend-mgub.onrender.com'
 };
