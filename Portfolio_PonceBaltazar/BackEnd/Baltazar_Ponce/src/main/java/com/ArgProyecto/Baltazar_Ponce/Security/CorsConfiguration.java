@@ -18,7 +18,7 @@ public class CorsConfiguration {
                 registry.addMapping("/**")
                     .allowedOrigins("https://balponargprog.web.app")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
-                    .allowedHeaders("*", "Content-Type", "Authorization")
+                    .allowedHeaders("*", "Content-Type", "Authorization", "Access-Control-Allow-Origin")
                     .allowCredentials(true);
             }
         };

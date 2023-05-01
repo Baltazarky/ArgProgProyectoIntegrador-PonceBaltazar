@@ -61,11 +61,12 @@ public class MainSecurity {
             .authorizeHttpRequests((requests) -> requests
             .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
             .requestMatchers(new AntPathRequestMatcher("/login")).permitAll()
+            .requestMatchers(new AntPathRequestMatcher("/**/login")).permitAll()
             .anyRequest().authenticated())
              .cors()
             .configurationSource(request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(Arrays.asList("https://backend-mgub.onrender.com", "https://balponargprog.web.app"));
+                config.setAllowedOrigins(Arrays.asList("https://backend-v5yq.onrender.com", "https://balponargprog.web.app"));
                 config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
                 config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
                 return config;
