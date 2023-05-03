@@ -13,11 +13,9 @@ D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBa
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Repository\IPersonaRepository.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Security\MainSecurity.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Dto\dtoExperiencia.java
-D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\CORS\CorsInterceptor.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Entity\Experiencia.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Entity\Persona.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Repository\RHyS.java
-D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\CORS\WebConfig.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Service\SEducacion.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\BaltazarPonceApplication.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Security\Entity\UsuarioPrincipal.java
@@ -33,10 +31,8 @@ D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBa
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Controller\PersonaController.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Service\SExperiencia.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Controller\CExperiencia.java
-D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\CORS\MyServlet.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Entity\HyS.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Security\Service\RolService.java
-D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\CORS\CustomInterceptor.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Repository\REducacion.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Security\Enums\RolNombre.java
 D:\Github\repositories\ArgProgProyectoIntegrador-PonceBaltazar\Portfolio_PonceBaltazar\BackEnd\Baltazar_Ponce\src\main\java\com\ArgProyecto\Baltazar_Ponce\Dto\DtoEducacion.java
