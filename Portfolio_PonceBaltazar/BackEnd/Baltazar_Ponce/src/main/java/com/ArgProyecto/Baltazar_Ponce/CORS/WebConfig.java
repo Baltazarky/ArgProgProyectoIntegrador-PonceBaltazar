@@ -1,3 +1,4 @@
+/*
 package com.ArgProyecto.Baltazar_Ponce.CORS;
 
 
@@ -6,10 +7,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Override
@@ -26,4 +24,6 @@ public class WebConfig implements WebMvcConfigurer {
     registry.addInterceptor(new CustomInterceptor());
   }
 }
+
+*/
 

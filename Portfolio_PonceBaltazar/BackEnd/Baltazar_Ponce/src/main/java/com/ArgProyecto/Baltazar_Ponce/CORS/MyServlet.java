@@ -1,4 +1,4 @@
-package com.ArgProyecto.Baltazar_Ponce.CORS;
+/*package com.ArgProyecto.Baltazar_Ponce.CORS;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -15,3 +15,5 @@ public class MyServlet extends HttpServlet {
     resp.getWriter().append(csvString);
   }
 }
+
+*/

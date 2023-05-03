@@ -68,7 +68,7 @@ public class MainSecurity {
                 CorsConfiguration config = new CorsConfiguration();
                 config.setAllowedOrigins(Arrays.asList("https://backend-v5yq.onrender.com", "https://balponargprog.web.app"));
                 config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
-                config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
+                config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization", "Access-Control-Allow-Origin"));
                 return config;
             })
         .and();

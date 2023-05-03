@@ -1,4 +1,4 @@
-package com.ArgProyecto.Baltazar_Ponce.CORS;
+/*package com.ArgProyecto.Baltazar_Ponce.CORS;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -27,3 +27,5 @@ public class CustomInterceptor implements HandlerInterceptor {
     // Lógica para manejar la solicitud después de que se haya completado, incluida la renderización de la vista (si corresponde)
   }
 }
+
+*/
