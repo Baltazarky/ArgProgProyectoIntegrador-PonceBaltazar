@@ -17,5 +17,5 @@ files:
     # Contenido del archivo
     content: |
       {
-        "allow_origins": ["https://balponargprog.web.app"]
+        "allow_origins": ["https://balponargprog.web.app", "https://localhost:4200"]
       }
