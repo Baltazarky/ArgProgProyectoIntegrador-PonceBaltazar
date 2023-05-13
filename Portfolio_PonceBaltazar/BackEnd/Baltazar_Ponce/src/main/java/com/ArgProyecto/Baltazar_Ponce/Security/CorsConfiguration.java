@@ -16,7 +16,7 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                    .allowedOrigins("https://balponargprog.web.app", "https://localhost:4200")
+                    .allowedOrigins("https://balponargprog.web.app", "http://localhost:4200")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("*", "Content-Type", "Authorization", "Access-Control-Allow-Origin")
                     .allowCredentials(true);

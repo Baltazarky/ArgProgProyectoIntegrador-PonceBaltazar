@@ -66,7 +66,7 @@ public class MainSecurity {
              .cors()
             .configurationSource(request -> {
                 CorsConfiguration config = new CorsConfiguration();
-                config.setAllowedOrigins(Arrays.asList("https://backend-v5yq.onrender.com", "https://balponargprog.web.app", "https://localhost:4200"));
+                config.setAllowedOrigins(Arrays.asList("https://backend-v5yq.onrender.com", "https://balponargprog.web.app", "http://localhost:4200"));
                 config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
                 config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization", "Access-Control-Allow-Origin"));
                 return config;
