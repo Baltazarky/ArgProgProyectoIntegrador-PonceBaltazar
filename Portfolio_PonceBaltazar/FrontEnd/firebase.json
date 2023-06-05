@@ -4,19 +4,10 @@
   },
   "hosting": {
     "public": "dist/portfolio-ponce-baltazar",
-    "headers": [
-      {
-        "source": "**",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }
-        ]
-      }
-    ],
     "ignore": [
-      
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
     "rewrites": [
       {
