@@ -3,9 +3,6 @@
 
 }
 
-div{
-    background-color: rgb(196, 200, 248);
-}
 
 .container{
     width: auto;
@@ -20,4 +17,68 @@ div{
     width: 230px;
     height: 175px;
     box-shadow: 7px 7px 30px #000;
+}
+
+.mi-componente {
+    border: 3px solid #000; /* Color y grosor del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    position: relative;
+    transition: all 0.7s ease; /* Smooth transition for open/close */
+    max-height: 0; /* Initially closed */
+    overflow: hidden; /* Hide content when closed */
+    opacity: 0; /* Initially invisible */
+    margin-left: 200px; /* Reserve space on the left-hand side */
+}
+
+.mi-componente.open {
+    max-height: 600px; /* Adjust to the content's height */
+    opacity: 1; /* Fully visible when open */
+    padding: 15px; /* Adjust padding when open */
+}
+
+.mi-componente.closed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0; /* No padding when closed */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+.container img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    
+  }
+
+
+.btn {
+    display: block; /* Make buttons stack vertically */
+    width: 100%; /* Ensure buttons take the full width */
+    margin-top: 50px; /* Add space between buttons */
+    padding: 10px; /* Add padding inside the buttons */
+    font-weight: 700; /* Bold font from the second style */
+    background: rgb(255, 255, 255); /* White background */
+    color: blueviolet; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 0.5rem; /* Slightly rounded corners */
+    border-bottom: 2px solid blueviolet; /* Bottom border */
+    border-right: 2px solid blueviolet; /* Right border */
+    border-top: 2px solid white; /* Top border */
+    border-left: 2px solid white; /* Left border */
+    transition-duration: 1s;
+    transition-property: border-top, border-left, border-bottom, border-right,
+        box-shadow;
+}
+
+.btn:hover {
+    border-top: 2px solid blueviolet; /* Top border on hover */
+    border-left: 2px solid blueviolet; /* Left border on hover */
+    border-bottom: 2px solid rgb(238, 103, 238); /* Bottom border hover */
+    border-right: 2px solid rgb(238, 103, 238); /* Right border hover */
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+        rgba(240, 46, 170, 0.2) 15px 15px; /* Box shadow on hover */
 }

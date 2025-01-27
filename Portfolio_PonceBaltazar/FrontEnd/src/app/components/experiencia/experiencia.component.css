@@ -3,10 +3,30 @@
 
 }
 
-div{
-    background-color: rgb(196, 200, 248);
-}
 
 h1,h3{
     display: inline;
+}
+
+.mi-componente {
+    border: 3px solid #000; /* Color y grosor del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    position: relative;
+    transition: all 0.7s ease; /* Smooth transition for open/close */
+    max-height: 0; /* Initially closed */
+    overflow: hidden; /* Hide content when closed */
+    opacity: 0; /* Initially invisible */
+    margin-left: 200px; /* Reserve space on the left-hand side */
+}
+
+.mi-componente.open {
+    max-height: 500px; /* Adjust to the content's height */
+    opacity: 1; /* Fully visible when open */
+    padding: 15px; /* Adjust padding when open */
+}
+
+.mi-componente.closed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0; /* No padding when closed */
 }

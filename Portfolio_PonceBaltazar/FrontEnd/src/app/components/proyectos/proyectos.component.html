@@ -1,12 +1,21 @@
-<div class="row">
-    <h1>Proyectos realizados</h1>
-    <div class="container">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h1>Portfolio Argentina Programa</h1>
-            <p>El portfolio personal de YoProgramo del curso de Programador Web Full Stack de Argentina Programa es mi único proyecto concluido hastá la fecha.</p>
+<div class="global-background mi-componente"
+     [ngClass]="{ 'open': isOpen, 'closed': !isOpen }">
+    <div class="row">
+        <h1>Proyectos realizados</h1>
+
+        <div *ngFor="let container of containers; let i = index" 
+             class="container"
+             [hidden]="currentIndex !== i">
+            <div class="col-sm-12 col-md-7 col-lg-7 parte1">
+                <h1>{{ container.title }}</h1>
+                <h2 *ngIf="container.subtitle">{{ container.subtitle }}</h2>
+                <p>{{ container.description }}</p>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
+                <img [src]="container.image" class="img-fluid" alt="Project image">
+            </div>
         </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/APLogo.png"   class="img-fluid" id="ArgProg">
-        </div>
+
+        <button class="btn" (click)="nextContainer()">Next</button>
     </div>
 </div>

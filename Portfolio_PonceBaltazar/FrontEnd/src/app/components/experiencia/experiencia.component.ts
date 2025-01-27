@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
+import { Subscription } from 'rxjs';
+import { SharedService } from 'src/app/service/shared.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -10,8 +12,9 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
-
-  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService){}
+  isOpen = false; // Tracks whether the component is open or closed
+  private subscription: Subscription;
+  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService, private sharedService: SharedService){}
 
   isLogged = false;
 
@@ -22,6 +25,11 @@ export class ExperienciaComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    this.subscription = this.sharedService.toggle$.subscribe((target: string) => {
+      if (target === 'experiencialaboral') { // Check if the target matches
+        this.toggleOpen();
+      }
+    });
   }
 
   cargarExperiencia():void{
@@ -42,5 +50,8 @@ export class ExperienciaComponent implements OnInit {
     }
   }
 
+  toggleOpen(): void {
+    this.isOpen = !this.isOpen; // Toggles the open/close state
+  }
 }
 

@@ -15,14 +15,14 @@ public class HyS {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
-    private int porcentaje;
+    private String porcentaje;
     
     //Constructors
 
     public HyS() {
     }
 
-    public HyS(String nombre, int porcentaje) {
+    public HyS(String nombre, String porcentaje) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
     }
@@ -46,11 +46,11 @@ public class HyS {
         this.nombre = nombre;
     }
 
-    public int getPorcentaje() {
+    public String getPorcentaje() {
         return porcentaje;
     }
 
-    public void setPorcentaje(int porcentaje) {
+    public void setPorcentaje(String porcentaje) {
         this.porcentaje = porcentaje;
     }
     

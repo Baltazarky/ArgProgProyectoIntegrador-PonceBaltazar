@@ -1,3 +1,4 @@
+
 export const environment = {
   firebase: {
     projectId: 'balponargprog',
@@ -11,5 +12,10 @@ export const environment = {
   },
 
     production: true,
-    URL: 'https://backend-v5yq.onrender.com'
+    URL: 'localhost:8081'
 };
+/*
+export const environment = {
+  production: false,
+  Url: 'http://localhost:8081/' // URL del backend
+};*/

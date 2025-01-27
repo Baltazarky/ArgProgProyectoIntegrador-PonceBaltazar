@@ -29,6 +29,7 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
-    EditAcercaDeComponent
+    EditAcercaDeComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
@@ -62,12 +64,13 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     HttpClientModule,
     NgCircleProgressModule.forRoot({
       
-    }),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
+    }),/*
+    provideFirebaseApp(() => initializeApp(environment.fierebase)),
+    provideStorage(() => getStorage())*/
   ],
   providers: [
-    interceptorProvider
+    // Lista de servicios proporcionados
+    { provide: 'URL', useValue: environment.URL } // Provee la URL del backend
   ],
   bootstrap: [AppComponent]
 })

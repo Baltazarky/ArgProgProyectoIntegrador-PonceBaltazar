@@ -3,15 +3,12 @@
 
 }
 
-div{
-    background-color: rgb(196, 200, 248);
-}
 
 footer{
-    color: #fefefe;
+    color: #0c0202;
     font-size: 14px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 2px -2px 5px #999;
+    min-height: 60px; /* Add this to ensure footer has a visible height */
 }

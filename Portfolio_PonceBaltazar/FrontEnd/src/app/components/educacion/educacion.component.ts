@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { SharedService } from 'src/app/service/shared.service';
 import { TokenService } from 'src/app/service/token.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-educacion',
@@ -10,36 +12,43 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
-
-  constructor(private educacionS: EducacionService, private tokenService: TokenService){}
   isLogged = false;
+  isOpen = false; // Tracks whether the component is open or closed
+  private subscription: Subscription;
+  constructor(private educacionS: EducacionService, private tokenService: TokenService, private sharedService: SharedService) {}
 
   ngOnInit(): void {
+    this.subscription = this.sharedService.toggle$.subscribe((target: string) => {
+      if (target === 'educacion') { // Check if the target matches
+        this.toggleOpen();
+      }
+    });
     this.cargarEducacion();
-    if(this.tokenService.getToken()){
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-    }
+    this.isLogged = !!this.tokenService.getToken();
   }
 
-  cargarEducacion(): void{
+  cargarEducacion(): void {
     this.educacionS.lista().subscribe(
-      data =>{
+      data => {
         this.educacion = data;
       }
-    )
+    );
   }
 
-  borrar(id: number){
-    if(id != undefined){
+  borrar(id: number): void {
+    if (id != undefined) {
       this.educacionS.delete(id).subscribe(
-        data =>{
+        data => {
           this.cargarEducacion();
-        }, err => {
-          alert("No fue posible eliminar el campo")
+        },
+        err => {
+          alert("No fue posible eliminar el campo");
         }
-      )
+      );
     }
+  }
+
+  toggleOpen(): void {
+    this.isOpen = !this.isOpen; // Toggles the open/close state
   }
 }

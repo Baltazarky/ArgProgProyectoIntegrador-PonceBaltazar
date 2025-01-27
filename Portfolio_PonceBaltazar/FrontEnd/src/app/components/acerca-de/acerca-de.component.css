@@ -1,42 +1,65 @@
 /* Requiere ajustes cuando se esté mas avanzado el proyecto */
 
-.row{
+.row {
     padding: 15px;
 
 }
-div{
-    background-color: rgb(196, 200, 248);
+
+div {
     text-align: center;
 }
 
-/* foto de perfil */
-@media (max-width: 575px){
-#FotoDePerfil{
-    position: absolute;
-    width: auto;
-    border-radius: 100%;
-    box-shadow: 3px 3px 3px grey;
-    left: 35.5%;
-    top: 635px;
-    }
+.mi-componente {
+    border: 3px solid #000; /* Color y grosor del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    position: relative;
+    transition: all 0.7s ease; /* Smooth transition for open/close */
+    max-height: 0; /* Initially closed */
+    overflow: hidden; /* Hide content when closed */
+    opacity: 0; /* Initially invisible */
+    margin-left: 200px; /* Reserve space on the left-hand side */
 }
 
-@media (min-width: 576px){
-    #FotoDePerfil{
-        position: absolute;
-        width: 200px;
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        left: 7%;
-        top: 640px;
-        }
-    }
-    
+.mi-componente.open {
+    max-height: 500px; /* Adjust to the content's height */
+    opacity: 1; /* Fully visible when open */
+    padding: 15px; /* Adjust padding when open */
+}
+
+.mi-componente.closed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0; /* No padding when closed */
+}
+
+/* foto de perfil */
+
+#FotoDePerfil {
+    position: relative;
+    width: 250px;
+    /* Set a fixed width for consistent circle */
+    height: 250px;
+    /* Set a fixed height for consistent circle */
+    overflow: hidden;
+    /* Hide overflowing parts of the image */
+    object-fit: cover;
+    /* Resize image to cover the element */
+    border-radius: 50%;
+    /* Optional for a slight border */
+    box-shadow: 3px 3px 3px grey;
+    top: 3%;
+    left: 8%;
+}
+
+.acercade {
+    margin-top: 5%;
+    margin-left: 10px;
+}
 
 /* nombre */
 
-#nombre{
+#nombre {
     font-weight: bold;
-    margin-top: 15%;
+    margin-top: 25%;
     margin-left: 10px;
 }
