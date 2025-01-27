@@ -67,7 +67,7 @@ public class CEducacion {
         
         Educacion educacion = new Educacion(dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE());
         sEducacion.save(educacion);
-        return new ResponseEntity(new Mensaje("Educacion creada exitosamente"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educacion creada exitosamente. Debug 2025"), HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
