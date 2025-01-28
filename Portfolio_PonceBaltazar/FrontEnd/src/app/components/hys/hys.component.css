@@ -7,7 +7,7 @@
     border: 3px solid #000; /* Color y grosor del borde */
     border-radius: 5px; /* Bordes redondeados */
     position: relative;
-    transition: max-height 0.7s ease, opacity 0.7s ease, padding 0.7s ease; /* Smooth transitions */
+    transition:all 0.17s; /* Smooth transitions */
     max-height: 0; /* Initially closed */
     overflow: hidden; /* Hide content when closed */
     opacity: 0; /* Initially invisible */
@@ -78,7 +78,7 @@ button.btn {
 .card {
     width: calc(33.33% - 10px); /* Asegura que haya 3 cartas por fila, restando el espacio del gap */
     height: 254px;
-    background-color: #0000009a;
+    background-color: #4746469a;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -125,7 +125,7 @@ button.btn {
     background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 /* Animación en hover */

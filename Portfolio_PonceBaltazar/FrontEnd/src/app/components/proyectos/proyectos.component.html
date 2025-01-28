@@ -7,9 +7,9 @@
              class="container"
              [hidden]="currentIndex !== i">
             <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-                <h1>{{ container.title }}</h1>
-                <h2 *ngIf="container.subtitle">{{ container.subtitle }}</h2>
-                <p>{{ container.description }}</p>
+                <h1 class="titulo">{{ container.title }}</h1>
+                <h2 class="subtitulo" *ngIf="container.subtitle">{{ container.subtitle }}</h2>
+                <p class="descripcion">{{ container.description }}</p>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
                 <img [src]="container.image" class="img-fluid" alt="Project image">

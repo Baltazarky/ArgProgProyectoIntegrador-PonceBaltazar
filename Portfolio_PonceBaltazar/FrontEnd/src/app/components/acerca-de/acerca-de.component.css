@@ -6,62 +6,78 @@
 }
 
 div {
-    text-align: center;
-}
-
-.mi-componente {
-    border: 3px solid #000; /* Color y grosor del borde */
-    border-radius: 5px; /* Bordes redondeados */
-    position: relative;
-    transition: all 0.7s ease; /* Smooth transition for open/close */
-    max-height: 0; /* Initially closed */
-    overflow: hidden; /* Hide content when closed */
-    opacity: 0; /* Initially invisible */
-    margin-left: 200px; /* Reserve space on the left-hand side */
+    text-align: left;
 }
 
 .mi-componente.open {
-    max-height: 500px; /* Adjust to the content's height */
+    max-height: none; /* Adjust to the content's height */
     opacity: 1; /* Fully visible when open */
-    padding: 15px; /* Adjust padding when open */
+    padding: 0px; /* Adjust padding when open */
 }
 
 .mi-componente.closed {
     max-height: 0;
     opacity: 0;
-    padding: 0; /* No padding when closed */
+    padding: 0; /*
+     No padding when closed */
 }
 
-/* foto de perfil */
+/* Main Styles for PC */
+.mi-componente {
+    border: 3px solid #000; /* Color y grosor del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    position: relative;
+    transition: all 0.5s ease; /* Smooth transition for open/close */
+    max-height: none; /* Adjust to the content's height */
+    opacity: 1; /* Fully visible when open */
+    padding: 20px; /* Add padding around the component */
+    margin-left: 200px; /* Reserve space on the left-hand side */
+    
+    display: block; /* Ensure that the container behaves as a block element */
+}
 
+/* Profile Row (Photo and Name) */
+.mi-componente .profile-row {
+    position: relative;
+    margin-bottom: 15px;
+    padding-right: 150px; /* Add padding to move content slightly to the left */
+}
+
+/* Profile Picture Position */
 #FotoDePerfil {
     position: relative;
-    width: 250px;
-    /* Set a fixed width for consistent circle */
-    height: 250px;
-    /* Set a fixed height for consistent circle */
+    width: 350px;
+    height: 350px;
     overflow: hidden;
-    /* Hide overflowing parts of the image */
     object-fit: cover;
-    /* Resize image to cover the element */
     border-radius: 50%;
-    /* Optional for a slight border */
     box-shadow: 3px 3px 3px grey;
-    top: 3%;
-    left: 8%;
+    display: inline-block;
+    margin-left: -10px; /* Move the photo a bit to the left */
 }
 
-.acercade {
-    margin-top: 5%;
-    margin-left: 10px;
-}
-
-/* nombre */
-
+/* Name Style */
 #nombre {
+    position: relative;
+    display: inline-block;
+    margin-left: -10px; /* Move the name a bit to the left */
     font-weight: bold;
-    margin-top: 25%;
-    margin-left: 10px;
+    font-size: 45px;
+    padding-top: 130px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+#nivel {
+    font-size: 35px;
+    font-style: italic;
+}
+
+/* About Me Section */
+.acercade {
+    margin-top: 5px; /* Space between the name and about me */
+    font-size: 30px;
+    text-align: left; /* Align text to the left */
 }
 
 @media (max-width: 768px) {
@@ -79,21 +95,31 @@ div {
         overflow: hidden; /* Hide content when closed */
     }
 
-     /* Foto de perfil adjustments */
-     #FotoDePerfil {
-        position: static; /* Reset position to flow naturally at the top */
+    #FotoDePerfil {
+        position: relative; /* Reset position to flow naturally at the top */
         margin: 0 auto; /* Center the image horizontally */
-        width: 130px; /* Scale down for smaller screens */
-        height: 130px; /* Match the new width for a perfect circle */
+        width: 230px; /* Scale down for smaller screens */
+        height: 230px; /* Match the new width for a perfect circle */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+        margin-top: 20px; /* Move the photo lower */
+        margin-left: 70px; /* Move the photo more to the right */
     }
 
-    /* Additional adjustments for smaller screens */
+    /* Name and Level adjustments */
+    #nombre {
+        font-size: 30px; /* Reduce the font size for smaller screens */
+        margin-top: 15px; /* Reduce top margin for better spacing */
+    }
+
+    #nivel {
+        font-size: 18px; /* Reduce the font size for smaller screens */
+        font-style: italic;
+    }
+
+    /* About Me Section adjustments */
     .acercade {
         margin-top: 10px; /* Reduce top margin */
         text-align: center; /* Ensure text aligns properly */
-    }
-
-    #nombre {
-        margin-top: 15px; /* Reduce top margin for better spacing */
+        font-size: 18px; /* Reduce the font size for smaller screens */
     }
 }

@@ -7,18 +7,14 @@
         </button>
     </div>
 
-    <!-- Profile Picture -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <img src="{{persona.img}}" class="img-fluid" id="FotoDePerfil">
-        </div>
-    </div>
-
-    <!-- Name and Level -->
-    <div class="row">
-        <div class="col-12 text-center">
+    <!-- Profile Row: Name and Photo in separate columns -->
+    <div class="row profile-row">
+        <div class="col-9 text-center">
             <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
             <p id="nivel">Estudiante de Ingenieria en Inteligencia Artificial</p>
+        </div>
+        <div class="col-3 text-center">
+            <img src="{{persona.img}}" class="img-fluid" id="FotoDePerfil">
         </div>
     </div>
 
@@ -27,7 +23,9 @@
         <div class="col-12">
             <div class="acercade text-center">
                 <h1>Acerca de mí</h1>
-                <p>{{persona.descripcion}}</p>
+                <p>Soy un programador joven y estudiante de Ingeniería en Inteligencia Artificial, con preferencia por Python.
+                     He trabajado en proyectos como una página web con Java, Maven, Spring Boot y Angular, y recientemente participé en mi primera Game Jam.
+                      Estoy en constante aprendizaje y busco desafíos que me permitan crecer profesionalmente.</p>
             </div>
         </div>
     </div>

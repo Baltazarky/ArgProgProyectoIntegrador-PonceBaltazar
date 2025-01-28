@@ -7,7 +7,7 @@
 footer{
     color: #0c0202;
     font-size: 14px;
-    display: flex;
+    display: relative;
     flex-direction: column;
     text-align: center;
     min-height: 60px; /* Add this to ensure footer has a visible height */

@@ -6,12 +6,15 @@ h1, h3 {
     display: inline;
 }
 
+.table {
+    font-size: 35px;
+}
 
 .mi-componente {
     border: 3px solid #000; /* Color y grosor del borde */
     border-radius: 5px; /* Bordes redondeados */
     position: relative;
-    transition: all 0.7s ease; /* Smooth transition for open/close */
+    transition: all 0.2s ease; /* Smooth transition for open/close */
     max-height: 0; /* Initially closed */
     overflow: hidden; /* Hide content when closed */
     opacity: 0; /* Initially invisible */
