@@ -63,3 +63,37 @@ div {
     margin-top: 25%;
     margin-left: 10px;
 }
+
+@media (max-width: 768px) {
+    .mi-componente {
+        max-height: none; /* Unlock height to fit content */
+        overflow: visible; /* Ensure all content is shown */
+    }
+
+    .mi-componente.open {
+        max-height: none; /* Allow content to expand naturally */
+    }
+
+    .mi-componente.closed {
+        max-height: 0; /* Retain closed state behavior */
+        overflow: hidden; /* Hide content when closed */
+    }
+
+     /* Foto de perfil adjustments */
+     #FotoDePerfil {
+        position: static; /* Reset position to flow naturally at the top */
+        margin: 0 auto; /* Center the image horizontally */
+        width: 130px; /* Scale down for smaller screens */
+        height: 130px; /* Match the new width for a perfect circle */
+    }
+
+    /* Additional adjustments for smaller screens */
+    .acercade {
+        margin-top: 10px; /* Reduce top margin */
+        text-align: center; /* Ensure text aligns properly */
+    }
+
+    #nombre {
+        margin-top: 15px; /* Reduce top margin for better spacing */
+    }
+}

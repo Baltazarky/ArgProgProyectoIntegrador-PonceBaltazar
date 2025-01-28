@@ -29,3 +29,19 @@ h1, h3 {
     opacity: 0;
     padding: 0; /* No padding when closed */
 }
+
+@media (max-width: 768px) {
+    .mi-componente {
+        max-height: none; /* Unlock height to fit content */
+        overflow: visible; /* Ensure all content is shown */
+    }
+
+    .mi-componente.open {
+        max-height: none; /* Allow content to expand naturally */
+    }
+
+    .mi-componente.closed {
+        max-height: 0; /* Retain closed state behavior */
+        overflow: hidden; /* Hide content when closed */
+    }
+}

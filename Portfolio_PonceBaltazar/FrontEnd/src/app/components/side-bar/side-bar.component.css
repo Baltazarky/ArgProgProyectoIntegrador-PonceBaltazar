@@ -38,3 +38,17 @@
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
         rgba(240, 46, 170, 0.2) 15px 15px; /* Box shadow on hover */
 }
+
+
+@media (max-width: 768px) {
+    .side-bar-container {
+        width: 120px; /* Reduce the width on smaller screens */
+        padding: 10px; /* Reduce padding for a compact look */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        margin-top: 30px; /* Reduce spacing between buttons */
+        padding: 8px; /* Adjust padding for smaller buttons */
+    }
+}

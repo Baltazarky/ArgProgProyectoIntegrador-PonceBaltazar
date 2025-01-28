@@ -152,3 +152,79 @@ button.btn {
     color: #efb8f5;
     font-weight: 600;
 }
+
+/* Truncate text and show ellipsis for overflowing content */
+.card p:not(.heading) {
+    font-size: 14px;
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-overflow: ellipsis; /* Add ellipsis to truncated text */
+    max-height: 20px; /* Adjust based on one line of text */
+}
+
+/* On hover or click (active class), expand the card to show full content */
+.card.active p:not(.heading),
+.card:hover p:not(.heading) {
+    white-space: normal; /* Allow text wrapping */
+    overflow: visible; /* Show the full content */
+    max-height: none; /* Remove height restriction */
+}
+
+/* Media Query: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .mi-componente {
+        max-height: none; /* Unlock height to fit content */
+        overflow: visible; /* Ensure all content is shown */
+    }
+
+    .mi-componente.open {
+        max-height: none; /* Allow content to expand naturally */
+    }
+
+    .mi-componente.closed {
+        max-height: 0; /* Retain closed state behavior */
+        overflow: hidden; /* Hide content when closed */
+    }
+
+    .card {
+        width: 100%; /* Make cards take full width on small screens */
+        height: auto; /* Adjust height for content */
+        margin-bottom: 16px; /* Add space between cards */
+    }
+
+    .card p:not(.heading) {
+        max-height: 40px; /* Allow more text lines before truncating */
+    }
+
+    .card.active {
+        width: 100%; /* Keep the expanded card at full width */
+        height: auto; /* Automatically adjust height */
+        padding: 16px;
+    }
+}
+
+/* Media Query: Extra small screens (below 580px) */
+@media (max-width: 580px) {
+    .mi-componente {
+        max-height: none; /* Unlock height to fit content */
+        overflow: visible; /* Ensure all content is shown */
+    }
+
+    .mi-componente.open {
+        max-height: none; /* Allow content to expand naturally */
+    }
+
+    .mi-componente.closed {
+        max-height: 0; /* Retain closed state behavior */
+        overflow: hidden; /* Hide content when closed */
+    }
+
+    .card {
+        flex-direction: column; /* Stack content vertically */
+        padding: 8px; /* Reduce padding */
+    }
+
+    .card p:not(.heading) {
+        font-size: 12px; /* Reduce font size */
+    }
+}

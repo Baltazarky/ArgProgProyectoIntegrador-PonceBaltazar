@@ -14,28 +14,47 @@ export class SideBarComponent implements OnInit, OnDestroy {
   headerHeight = 0;
   footerHeight = 0;
 
+  currentOpen: string | null = null; // Tracks the currently open component
+
   constructor(private headerFooterService: HeaderFooterService, private sharedService: SharedService) {}
 
   toggleAcercaDe() {
-    this.sharedService.triggerToggle('acercade'); // Target the educacion component
+    this.toggle('acercade', () => this.sharedService.triggerToggle('acercade'));
   }
-  
+
   toggleExperienciaLaboral() {
-    this.sharedService.triggerToggle('experiencialaboral'); // Target the educacion component
+    this.toggle('experiencialaboral', () => this.sharedService.triggerToggle('experiencialaboral'));
   }
+
   toggleEducacion() {
-    this.sharedService.triggerToggle('educacion'); // Target the educacion component
+    this.toggle('educacion', () => this.sharedService.triggerToggle('educacion'));
   }
+
   toggleSkills() {
-    this.sharedService.triggerToggle('skills'); // Target the educacion component
+    this.toggle('skills', () => this.sharedService.triggerToggle('skills'));
   }
 
   toggleProyectos() {
-    this.sharedService.triggerToggle('proyectos'); // Target the educacion component
+    this.toggle('proyectos', () => this.sharedService.triggerToggle('proyectos'));
+  }
+
+  private toggle(component: string, toggleCallback: () => void) {
+    if (this.currentOpen === component) {
+      // If the component is already open, close it
+      toggleCallback();
+      this.currentOpen = null;
+    } else {
+      // Close the currently open component, if any
+      if (this.currentOpen) {
+        this.sharedService.triggerToggle(this.currentOpen);
+      }
+      // Open the new component
+      toggleCallback();
+      this.currentOpen = component;
+    }
   }
 
   ngOnInit() {
-    // Subscribe to the header and footer height observables
     this.headerHeightSub = this.headerFooterService.headerHeight$.subscribe(height => {
       this.headerHeight = height;
       this.updateSidebarHeight();
@@ -48,7 +67,6 @@ export class SideBarComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // Unsubscribe to avoid memory leaks
     this.headerHeightSub.unsubscribe();
     this.footerHeightSub.unsubscribe();
   }
@@ -60,10 +78,4 @@ export class SideBarComponent implements OnInit, OnDestroy {
       sidebar.style.height = `${windowHeight - this.headerHeight - this.footerHeight}px`;
     }
   }
-
-  onButtonClick(buttonNumber: number): void {
-    console.log(`Button ${buttonNumber} clicked!`);
-  }
-
 }
-
