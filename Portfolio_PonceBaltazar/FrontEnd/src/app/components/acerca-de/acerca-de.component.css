@@ -81,46 +81,49 @@ div {
 }
 
 @media (max-width: 768px) {
+    .body {
+        margin: 0;
+        padding: 0;
+    }
+
     .mi-componente {
-        margin-left: 120px; /* Reserve space on the left-hand side */
-        max-height: none; /* Unlock height to fit content */
-        overflow: visible; /* Ensure all content is shown */
+        margin-left: 120px; 
+        max-height: none;
+        overflow: visible;
+        padding: 1px; /* Reduce el padding para hacer el contenido más compacto */
     }
 
-    .mi-componente.open {
-        max-height: none; /* Allow content to expand naturally */
-    }
-
-    .mi-componente.closed {
-        max-height: 0; /* Retain closed state behavior */
-        overflow: hidden; /* Hide content when closed */
+    .profile-row {
+        display: flex;
+        align-items: center; /* Alinea verticalmente nombre y foto */
+        gap: 5px; /* Reduce el espacio entre la imagen y el texto */
+        padding: 0;
+        margin: 0;
     }
 
     #FotoDePerfil {
-        position: relative; /* Reset position to flow naturally at the top */
-        margin: 0 auto; /* Center the image horizontally */
-        width: 230px; /* Scale down for smaller screens */
-        height: 230px; /* Match the new width for a perfect circle */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
-        margin-top: 20px; /* Move the photo lower */
-        margin-left: 70px; /* Move the photo more to the right */
+        position: absolute; /* Evita problemas con absolute */
+        width: 150px !important; 
+        height: 150px !important;
+        margin: 0;
+        margin-top: -250px;
+        margin-left: 80px;
     }
 
-    /* Name and Level adjustments */
     #nombre {
-        font-size: 25px; /* Reduce the font size for smaller screens */
-        margin-top: 15px; /* Reduce top margin for better spacing */
+        font-size: 18px;
+        padding-top: 1px;
+        margin: 0;
+        font-weight: bold;
     }
 
     #nivel {
-        font-size: 14px; /* Reduce the font size for smaller screens */
-        font-style: italic;
+        font-size: 16px;
+        margin: 0;
     }
 
-    /* About Me Section adjustments */
     .acercade {
-        margin-top: 10px; /* Reduce top margin */
-        text-align: center; /* Ensure text aligns properly */
-        font-size: 18px; /* Reduce the font size for smaller screens */
+        margin-top: 5px; /* Reduce espacio entre nombre y texto */
+        font-size: 15px;
     }
 }

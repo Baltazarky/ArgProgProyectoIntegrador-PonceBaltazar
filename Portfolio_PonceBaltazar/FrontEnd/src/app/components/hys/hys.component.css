@@ -170,7 +170,6 @@ button.btn {
     max-height: none; /* Remove height restriction */
 }
 
-/* Media Query: Adjust for smaller screens */
 @media (max-width: 768px) {
     .mi-componente {
         margin-left: 120px; /* Reserve space on the left-hand side */
@@ -188,44 +187,35 @@ button.btn {
     }
 
     .card {
-        width: 100%; /* Make cards take full width on small screens */
-        height: auto; /* Adjust height for content */
-        margin-bottom: 16px; /* Add space between cards */
-    }
-
-    .card p:not(.heading) {
-        max-height: 40px; /* Allow more text lines before truncating */
-    }
-
-    .card.active {
-        width: 100%; /* Keep the expanded card at full width */
-        height: auto; /* Automatically adjust height */
+        width: 100%; /* Ocupar todo el ancho */
+        height: auto; /* Ajustar la altura según el contenido */
+        margin-bottom: 16px; /* Espacio entre cartas */
         padding: 16px;
-    }
-}
-
-/* Media Query: Extra small screens (below 580px) */
-@media (max-width: 580px) {
-    .mi-componente {
-        max-height: none; /* Unlock height to fit content */
-        overflow: visible; /* Ensure all content is shown */
+        overflow: auto; /* Permitir desplazamiento si hay mucho contenido */
+        background-color: #0000009a; /* Mantener el color de la activa */
     }
 
-    .mi-componente.open {
-        max-height: none; /* Allow content to expand naturally */
-    }
-
-    .mi-componente.closed {
-        max-height: 0; /* Retain closed state behavior */
-        overflow: hidden; /* Hide content when closed */
-    }
-
-    .card {
-        flex-direction: column; /* Stack content vertically */
-        padding: 8px; /* Reduce padding */
+    /* Hacer que todas las cartas sean activas por defecto en móviles */
+    .card::before,
+    .card::after {
+        display: none; /* Oculta los efectos hover innecesarios */
     }
 
     .card p:not(.heading) {
-        font-size: 12px; /* Reduce font size */
+        white-space: normal; /* Permitir saltos de línea */
+        overflow: visible;
+        max-height: none; /* Mostrar todo el contenido */
+    }
+
+    /* Cambio de color en hover sin animación */
+    .card:hover {
+        background-color: #5f4b8b; /* Nuevo color al pasar el cursor */
+    }
+
+    /* Desactivar el agrandamiento de la carta al tocarla en móviles */
+    .card.active {
+        width: 100%; /* Mantener el tamaño normal */
+        height: auto; /* Mantener la altura dinámica */
+        padding: 16px; /* Mantener el mismo padding */
     }
 }

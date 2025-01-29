@@ -81,3 +81,36 @@
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
         rgba(240, 46, 170, 0.2) 15px 15px; /* Box shadow on hover */
 }
+
+
+@media (max-width: 768px) {
+    .mi-componente {
+        margin-left: 120px; /* Reserve space on the left-hand side */
+        max-height: none; /* Unlock height to fit content */
+        overflow: visible; /* Ensure all content is shown */
+    }
+
+    .mi-componente.open {
+        max-height: none; /* Allow content to expand naturally */
+    }
+
+    .mi-componente.closed {
+        max-height: 0; /* Retain closed state behavior */
+        overflow: hidden; /* Hide content when closed */
+    }
+
+    .container {
+        width: auto;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .container img {
+        margin-top: 20px; /* Ajusta el margen para separarla del resto */
+        width: 100px; /* Tamaño reducido */
+        height: 100px;
+        order: 1; /* Asegura que la imagen esté en la última posición */
+    }
+}

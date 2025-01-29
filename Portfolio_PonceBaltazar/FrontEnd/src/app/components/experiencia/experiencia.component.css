@@ -50,4 +50,12 @@ h1,h3{
         max-height: 0; /* Retain closed state behavior */
         overflow: hidden; /* Hide content when closed */
     }
+
+    .table {
+        width: auto;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+        align-items: center; /* Centra los elementos */
+    }
 }
