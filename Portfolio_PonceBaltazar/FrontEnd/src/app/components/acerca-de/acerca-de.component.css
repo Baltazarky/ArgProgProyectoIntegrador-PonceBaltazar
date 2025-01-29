@@ -82,6 +82,7 @@ div {
 
 @media (max-width: 768px) {
     .mi-componente {
+        margin-left: 120px; /* Reserve space on the left-hand side */
         max-height: none; /* Unlock height to fit content */
         overflow: visible; /* Ensure all content is shown */
     }
@@ -107,12 +108,12 @@ div {
 
     /* Name and Level adjustments */
     #nombre {
-        font-size: 30px; /* Reduce the font size for smaller screens */
+        font-size: 25px; /* Reduce the font size for smaller screens */
         margin-top: 15px; /* Reduce top margin for better spacing */
     }
 
     #nivel {
-        font-size: 18px; /* Reduce the font size for smaller screens */
+        font-size: 14px; /* Reduce the font size for smaller screens */
         font-style: italic;
     }
 

@@ -35,6 +35,7 @@ h1, h3 {
 
 @media (max-width: 768px) {
     .mi-componente {
+        margin-left: 120px; /* Reserve space on the left-hand side */
         max-height: none; /* Unlock height to fit content */
         overflow: visible; /* Ensure all content is shown */
     }

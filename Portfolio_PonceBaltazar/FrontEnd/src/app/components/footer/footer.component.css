@@ -1,14 +1,25 @@
 .row{
-    padding: 15px;
+    padding: 5px;
 
 }
 
+footer p {
+    margin: 2px 0; /* Ajusta el valor según necesites */
+}
 
 footer{
     color: #0c0202;
-    font-size: 14px;
+    font-size: 12px;
+    font-style: italic;
     display: relative;
     flex-direction: column;
     text-align: center;
     min-height: 60px; /* Add this to ensure footer has a visible height */
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        margin-left: 120px; /* Reserve space on the left-hand side */
+    }
 }
