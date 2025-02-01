@@ -14,7 +14,7 @@ export class ProyectosComponent implements OnInit  {
     {
       title: 'Portfolio Argentina Programa',
       description: 'El portfolio personal de YoProgramo del curso de Programador Web Full Stack de Argentina Programa es mi primer proyecto concluido.',
-      image: '../../../assets/APLogo_purple.png',
+      image: '../../../assets/APLogo.png',
       link: 'https://github.com/Baltazarky/ArgProgProyectoIntegrador-PonceBaltazar'
     },
     {

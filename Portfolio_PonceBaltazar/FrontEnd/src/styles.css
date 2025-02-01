@@ -1,7 +1,7 @@
 
 
 html{
-    background-color: hsla(172.99999999999994, 0%, 100%, 1);
+    background-color: rgb(163, 146, 168);
     background-image: radial-gradient(circle at 1% 2%, hsla(249.99999999999994, 76%, 61%, 0.59) 7%, transparent 84%), radial-gradient(circle at 95% 96%, hsla(166.53061224489795, 71%, 60%, 0.24) 7%, transparent 84%), radial-gradient(circle at 2% 98%, hsla(296.47058823529414, 100%, 51%, 0.25) 7%, transparent 84%);
     background-blend-mode: normal, normal, normal;
 
@@ -10,7 +10,7 @@ html{
 
 /* styles.css */
 .global-background {
-    background-color: hsla(172.99999999999994, 0%, 100%, 1);
+    background-color: rgb(163, 146, 168);
     background-image: radial-gradient(circle at 1% 2%, hsla(249.99999999999994, 76%, 61%, 0.59) 7%, transparent 84%), radial-gradient(circle at 95% 96%, hsla(166.53061224489795, 71%, 60%, 0.24) 7%, transparent 84%), radial-gradient(circle at 2% 98%, hsla(296.47058823529414, 100%, 51%, 0.25) 7%, transparent 84%);
     background-blend-mode: normal, normal, normal;
 

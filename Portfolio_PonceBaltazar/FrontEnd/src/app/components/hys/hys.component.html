@@ -1,29 +1,30 @@
 <div class="global-background mi-componente" 
      [ngClass]="{ 'open': isOpen, 'closed': !isOpen }">
   <div class="row">
-    <h1>Hard and Soft Skills</h1>
+    <h1><span style="color: #773937;">Hard</span> and <span style="color: #0f5b5c;">Soft</span> Skills</h1>
 
     <div class="col-lg-2">
       <button type="button" routerLink="/newskill" class="btn btn-primary" *ngIf="isLogged">Nueva Habilidad</button>
     </div>
 
     <!-- Contenedor de cartas visibles -->
-    <div class="skills-container">
-      <div class="col-sm-4 col-md-4 col-lg-4" 
-           *ngFor="let skill of visibleSkills; let i = index">
-        <div 
-          class="card" 
-          [class.active]="selectedCard === i" 
-          (click)="toggleCard(i)">
-          <p class="heading">
-            {{ skill.nombre }}
-          </p>
-          <p>
-            {{ skill.porcentaje }}
-          </p>
-        </div>
+  <div class="skills-container">
+    <div class="col-sm-4 col-md-4 col-lg-4" 
+        *ngFor="let skill of visibleSkills; let i = index">
+      <div 
+        class="card" 
+        [class.active]="selectedCard === i" 
+        [ngClass]="{'soft-skill': skill.isSoft}" 
+        (click)="toggleCard(i)">
+        <p class="heading">
+          {{ skill.nombre }}
+        </p>
+        <p>
+          {{ skill.porcentaje }}
+        </p>
       </div>
     </div>
+  </div>
 
     <!-- Botones de navegación -->
     <div class="navigation-buttons">

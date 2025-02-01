@@ -72,7 +72,14 @@ export class HysComponent implements OnInit {
   updateVisibleSkills(): void {
     const start = this.currentPage * this.itemsPerPage;
     const end = start + this.itemsPerPage;
-    this.visibleSkills = this.skill.slice(start, end);
+    this.visibleSkills = this.skill.slice(start, end).map((skill, index) => ({
+      ...skill,
+      isSoft: this.isSoftSkill(start + index) // Determina si es Soft-Skill
+    }));
+  }
+
+  isSoftSkill(index: number): boolean {
+    return index >= 6; // Considera Soft-Skills a partir de la posición 6
   }
 
   // Cambiar a la página anterior
